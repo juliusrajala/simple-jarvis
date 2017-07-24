@@ -1,5 +1,8 @@
-import speech_recognition as sr
+'''
+'''
 import logging
+import speech_recognition as sr
+from src import witrecognizer
 
 logger = logging.Logger("AssistantLogger", level=logging.INFO)
 recognizer = sr.Recognizer()
@@ -27,7 +30,6 @@ def external_recognition():
     '''
     logger.warning('Recognizing intent using wit.ai')
     audio = record_audio()
-    recognizer.recognize_wit('''TODO: API_KEY etc.''')
 
 def main():
     listening = True
